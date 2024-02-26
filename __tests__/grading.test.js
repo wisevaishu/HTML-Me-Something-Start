@@ -32,13 +32,14 @@ describe ("Grading Tests: ", function () {
 
    it("HTML contains correct number of sections", function() {
       let childrenElements = document.body.children;
-
+      
       expect(childrenElements.length).toBeGreaterThanOrEqual(3);
       expect(childrenElements.length).toBeLessThanOrEqual(10);
    })
 
    it("HTML includes external CSS script", function() {
       let linkElement = document.getElementsByTagName("Link");
+      
       expect(linkElement.item(0).href.includes('styles.css')).toBe(true);
    })
 
